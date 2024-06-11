@@ -1,0 +1,18 @@
+<!doctype html>
+<html>
+  <head>
+    <title>Genesis Ramirez</title>
+
+    {% comment %} {{ 'index.css' | asset_url | stylesheet_tag }} {% endcomment %}
+
+    {{ 'tailwind-output.css' | asset_url | stylesheet_tag }}
+
+    {{ content_for_header }}
+  </head>
+  <body>
+    {% section 'header-welcome-banner' %}
+    {% section 'header' %}
+
+    {{ content_for_layout }}
+  </body>
+</html>
