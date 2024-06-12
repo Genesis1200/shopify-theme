@@ -1,0 +1,63 @@
+<div class="flex justify-center">
+  <h2 class="text-2xl font-bold uppercase inline-block border-2 border-black my-12 py-2 px-4 cursor-pointer">
+    <a>shop new arrivals</a>
+  </h2>
+</div>
+
+{% schema %}
+{
+  "name": "Carousel",
+  "tag": "section",
+  "class": "Carousel",
+  "limit": 1,
+  "settings": [
+    {
+      "type": "text",
+      "id": "title",
+      "label": "Carousel"
+    }
+  ],
+  "max_blocks": 5,
+  "blocks": [
+    {
+      "name": "Slide",
+      "type": "slide",
+      "settings": [
+        {
+          "type": "image_picker",
+          "id": "image",
+          "label": "Image"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Carousel",
+      "settings": {
+        "title": "Carousel"
+      },
+      "blocks": [
+        {
+          "type": "slide"
+        },
+        {
+          "type": "slide"
+        }
+      ]
+    }
+  ],
+  "locales": {
+    "en": {
+      "title": "Carousel"
+    },
+    "fr": {
+      "title": "Diaporama"
+    }
+  },
+  "enabled_on": {
+    "templates": ["*"],
+    "groups": ["footer"]
+  }
+}
+{% endschema %}
