@@ -1,8 +1,50 @@
-<div class="flex justify-center">
-  <h2 class="text-2xl font-bold uppercase inline-block border-2 border-black my-12 py-2 px-4 cursor-pointer">
-    <a>shop new arrivals</a>
-  </h2>
+<div class="grid justify-center">
+  <div class="flex justify-center">
+    <h2 class="text-2xl font-bold uppercase inline-block border-2 border-black my-12 py-2 px-4 cursor-pointer">
+      <a>shop new arrivals</a>
+    </h2>
+  </div>
+
+  <div class="">
+    <div class="flex">
+      <div class="flex  items-center">
+        <button class="inline mr-2 rounded-full bg-[#FFD43B]" id="next-btn">L</button>
+      </div>
+      <div class="flex gap-x-12 scroll-smooth overflow-auto snap-x snap-mandatory">
+        <a class="snap-center">
+          <img height="190px" width="230px" src="https://placehold.co/190x230">
+        </a>
+        <a class="snap-center">
+          <img height="190px" width="230px" src="https://placehold.co/190x230">
+        </a>
+        <a class="snap-center">
+          <img height="190px" width="230px" src="https://placehold.co/190x230">
+        </a>
+        <a snap="snap-center">
+          <img height="190px" width="230px" src="https://placehold.co/190x230">
+        </a>
+      </div>
+      <div class="flex  items-center">
+        <button class="inline ml-2 rounded-full bg-[#FFD43B]" id="next-btn">R</button>
+      </div>
+    </div>
+  </div>
 </div>
+
+<script>
+  const prev = document.getElementById('prev-btn');
+  const next = document.getElementById('next-btn');
+  const list = document.getElementById('item-list');
+  const itemWidth = 150;
+  const padding = 10;
+
+  prev.addEventListener('click', () => {
+    list.scrollLeft -= itemWidth + padding;
+  });
+  next.addEventListener('click', () => {
+    list.scrollLeft += itemWidth + padding;
+  });
+</script>
 
 {% schema %}
 {

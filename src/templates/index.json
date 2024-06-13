@@ -4,9 +4,55 @@
       "type": "featured-product",
       "settings": {
       }
+    },
+    "carousel_iQ6yJG": {
+      "type": "carousel",
+      "blocks": {
+        "slide_VpNtND": {
+          "type": "slide",
+          "settings": {
+          }
+        },
+        "slide_bdQryF": {
+          "type": "slide",
+          "settings": {
+          }
+        }
+      },
+      "block_order": [
+        "slide_VpNtND",
+        "slide_bdQryF"
+      ],
+      "settings": {
+        "title": "Carousel"
+      }
+    },
+    "homepage_content_z34pG3": {
+      "type": "homepage-content",
+      "blocks": {
+        "slide_MNJJEp": {
+          "type": "slide",
+          "settings": {
+          }
+        },
+        "slide_NAgeLJ": {
+          "type": "slide",
+          "settings": {
+          }
+        }
+      },
+      "block_order": [
+        "slide_MNJJEp",
+        "slide_NAgeLJ"
+      ],
+      "settings": {
+        "title": "Slideshow"
+      }
     }
   },
   "order": [
-    "main"
+    "main",
+    "carousel_iQ6yJG",
+    "homepage_content_z34pG3"
   ]
 }
