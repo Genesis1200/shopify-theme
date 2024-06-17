@@ -1,0 +1,100 @@
+<div class="w-[1250px] mx-auto mt-20">
+  <div>
+    <div>
+      <h3 class="text-2xl font-medium uppercase mb-5">blah blah blah social media</h3>
+      <p class="mb-5">Tag us online @blah! blah blah blah</p>
+    </div>
+
+    <div class="w-[90%] mx-auto">
+      <div class="flex">
+        <div class="flex  items-center">
+          <button class="inline mr-2 rounded-full bg-[#FFD43B]" id="next-btn">L</button>
+        </div>
+        <div class="flex gap-x-3 scroll-smooth overflow-auto snap-x snap-mandatory">
+          <a href="#" class="snap-center">
+            <img height="300px" width="300px" src="https://placehold.co/300x300">
+          </a>
+          <a href="#" class="snap-center">
+            <img height="300px" width="300px" src="https://placehold.co/300x300">
+          </a>
+          <a href="#" class="snap-center">
+            <img height="300px" width="300px" src="https://placehold.co/300x300">
+          </a>
+          <a href="#" snap="snap-center">
+            <img height="300px" width="300px" src="https://placehold.co/300x300">
+          </a>
+        </div>
+        <div class="flex  items-center">
+          <button class="inline ml-2 rounded-full bg-[#FFD43B]" id="next-btn">R</button>
+        </div>
+      </div>
+    </div>
+
+    <div class="mt-12 flex justify-center gap-4">
+      <div>
+        <a class="bg-[#FFD43B] text-xl font-semibold uppercase py-2.5 px-5" href="#">view more</a>
+      </div>
+      <div>
+        <a class="border-2 border-black text-xl font-semibold uppercase py-2.5 px-5" href="#">upload image</a>
+      </div>
+    </div>
+  </div>
+</div>
+
+{% schema %}
+{
+  "name": "Carousel-2",
+  "tag": "section",
+  "class": "Carousel",
+  "limit": 1,
+  "settings": [
+    {
+      "type": "text",
+      "id": "title",
+      "label": "Carousel"
+    }
+  ],
+  "max_blocks": 5,
+  "blocks": [
+    {
+      "name": "Slide",
+      "type": "slide",
+      "settings": [
+        {
+          "type": "image_picker",
+          "id": "image",
+          "label": "Image"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Carousel",
+      "settings": {
+        "title": "Carousel"
+      },
+      "blocks": [
+        {
+          "type": "slide"
+        },
+        {
+          "type": "slide"
+        }
+      ]
+    }
+  ],
+  "locales": {
+    "en": {
+      "title": "Carousel"
+    },
+    "fr": {
+      "title": "Diaporama"
+    }
+  },
+  "enabled_on": {
+    "templates": ["*"],
+    "groups": ["footer"]
+  }
+}
+{% endschema %}

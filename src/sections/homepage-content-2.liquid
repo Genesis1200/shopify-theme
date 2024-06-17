@@ -1,0 +1,89 @@
+<div class="mt-24">
+  <div class="flex py-5 px-16 gap-x-4">
+    <div>
+      <a href="#">
+        <img width="500px" height="570px" src="https://placehold.co/500x570">
+      </a>
+      <h3 class="bg-[black] text-white text-lg font-medium uppercase inline-block mt-1.5">blah blah blah blah</h3>
+      <div class="mt-2.5">
+        <a class="text-lg font-medium uppercase" href="#">blah blah</a>
+      </div>
+    </div>
+    <div>
+      <a href="#">
+        <img width="500px" height="570px" src="https://placehold.co/500x570">
+      </a>
+      <h3 class="bg-[black] text-white text-lg font-medium uppercase inline-block mt-1.5">blah blah blah blah</h3>
+      <div class="mt-2.5">
+        <a class="text-lg font-medium uppercase" href="#">blah blah</a>
+      </div>
+    </div>
+    <div>
+      <a href="#">
+        <img width="500px" height="570px" src="https://placehold.co/500x570">
+      </a>
+      <h3 class="bg-[black] text-white text-lg font-medium uppercase inline-block mt-1.5">blah blah blah blah</h3>
+      <div class="mt-2.5">
+        <a class="text-lg font-medium uppercase" href="#">blah blah</a>
+      </div>
+    </div>
+  </div>
+</div>
+
+{% schema %}
+{
+  "name": "homepage-content-2",
+  "tag": "section",
+  "class": "slideshow",
+  "limit": 1,
+  "settings": [
+    {
+      "type": "text",
+      "id": "title",
+      "label": "Slideshow"
+    }
+  ],
+  "max_blocks": 5,
+  "blocks": [
+    {
+      "name": "Slide",
+      "type": "slide",
+      "settings": [
+        {
+          "type": "image_picker",
+          "id": "image",
+          "label": "Image"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Slideshow",
+      "settings": {
+        "title": "Slideshow"
+      },
+      "blocks": [
+        {
+          "type": "slide"
+        },
+        {
+          "type": "slide"
+        }
+      ]
+    }
+  ],
+  "locales": {
+    "en": {
+      "title": "Slideshow"
+    },
+    "fr": {
+      "title": "Diaporama"
+    }
+  },
+  "enabled_on": {
+    "templates": ["*"],
+    "groups": ["footer"]
+  }
+}
+{% endschema %}
