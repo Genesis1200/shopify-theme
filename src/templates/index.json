@@ -1,3 +1,12 @@
+/*
+* ------------------------------------------------------------
+* IMPORTANT: The contents of this file are auto-generated.
+*
+* This file may be updated by the Shopify admin theme editor
+* or related systems. Please exercise caution as any changes
+* made to this file may be overwritten.
+* ------------------------------------------------------------
+*/
 {
   "sections": {
     "main": {
@@ -92,6 +101,28 @@
       "settings": {
         "title": "Carousel"
       }
+    },
+    "footer_dD9UxX": {
+      "type": "footer",
+      "blocks": {
+        "slide_jFBinX": {
+          "type": "slide",
+          "settings": {
+          }
+        },
+        "slide_Pdw9cY": {
+          "type": "slide",
+          "settings": {
+          }
+        }
+      },
+      "block_order": [
+        "slide_jFBinX",
+        "slide_Pdw9cY"
+      ],
+      "settings": {
+        "title": "Carousel"
+      }
     }
   },
   "order": [
@@ -99,6 +130,7 @@
     "carousel_iQ6yJG",
     "homepage_content_z34pG3",
     "homepage_content_2_rbgk8F",
-    "carousel_2_99PK9w"
+    "carousel_2_99PK9w",
+    "footer_dD9UxX"
   ]
 }

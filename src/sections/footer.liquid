@@ -1,0 +1,121 @@
+<div class="mt-20">
+  <div class="bg-[#222] flex justify-center">
+    <div class="px-10 pt-10 pb-11">
+      <h3 class="text-white text-lg uppercase font-semibold mb-2.5">sign up for email</h3>
+      <p class="text-[#FFD43B] mb-2.5">blah blah blah</p>
+      <div class="flex">
+        <input class="placeholder:text-[#ADB5BD] bg-white w-96" type="text" placeholder="Enter your email address">
+        <div class="flex">
+          <a class="bg-[#FFD43B] text-black text-lg font-semibold uppercase flex items-center py-2.5 px-8 mr"
+            >sign up</a
+          >
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="bg-black">
+    <div class="w-[1064px] flex justify-between border-t mx-auto py-11 px-6">
+      <div>
+        <p class="text-white text-lg uppercase mb-2.5">about us</p>
+        <ul>
+          <li class="mb-1.5"><a href="#" class="text-[#adb5bd] uppercase hover:underline">blah</a></li>
+          <li class="mb-1.5"><a href="#" class="text-[#adb5bd] uppercase hover:underline">blah blah</a></li>
+          <li class="mb-1.5"><a href="#" class="text-[#adb5bd] uppercase hover:underline">blah</a></li>
+          <li class="mb-1.5"><a href="#" class="text-[#adb5bd] uppercase hover:underline">blah</a></li>
+          <li class="mb-1.5"><a href="#" class="text-[#adb5bd] uppercase hover:underline">blahblah</a></li>
+        </ul>
+      </div>
+      <div>
+        <p class="text-white text-lg uppercase mb-2.5">info</p>
+        <ul>
+          <li class="mb-1.5"><a href="#" class="text-[#adb5bd] uppercase hover:underline">blah</a></li>
+          <li class="mb-1.5"><a href="#" class="text-[#adb5bd] uppercase hover:underline">blah blah</a></li>
+          <li class="mb-1.5"><a href="#" class="text-[#adb5bd] uppercase hover:underline">blah</a></li>
+          <li class="mb-1.5"><a href="#" class="text-[#adb5bd] uppercase hover:underline">blahblah</a></li>
+        </ul>
+      </div>
+      <div>
+        <p class="text-white text-lg uppercase mb-2.5">other stuff</p>
+        <ul>
+          <li class="mb-1.5"><a href="#" class="text-[#adb5bd] uppercase hover:underline">blah</a></li>
+          <li class="mb-1.5"><a href="#" class="text-[#adb5bd] uppercase hover:underline">blah blah</a></li>
+          <li class="mb-1.5"><a href="#" class="text-[#adb5bd] uppercase hover:underline">blah</a></li>
+        </ul>
+      </div>
+      <div>
+        <p class="text-white text-lg uppercase mb-2.5">other other stuff</p>
+        <ul>
+          <li class="mb-1.5"><a href="#" class="text-[#adb5bd] uppercase hover:underline">blah</a></li>
+          <li class="mb-1.5"><a href="#" class="text-[#adb5bd] uppercase hover:underline">blah blah</a></li>
+          <li class="mb-1.5"><a href="#" class="text-[#adb5bd] uppercase hover:underline">blah</a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <div class="bg-[#222]">
+    <div class="flex justify-between mx-auto px-5 py-3 w-[1000px]">
+      <div><p class="text-[#868e96] uppercase">2024 blah blah</p></div>
+      <div><p class="text-[#868e96] uppercase">#blahblahblah</p></div>
+    </div>
+  </div>
+</div>
+
+{% schema %}
+{
+  "name": "footer",
+  "tag": "section",
+  "class": "footer",
+  "limit": 1,
+  "settings": [
+    {
+      "type": "text",
+      "id": "title",
+      "label": "footer"
+    }
+  ],
+  "max_blocks": 5,
+  "blocks": [
+    {
+      "name": "Slide",
+      "type": "slide",
+      "settings": [
+        {
+          "type": "image_picker",
+          "id": "image",
+          "label": "Image"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Carousel",
+      "settings": {
+        "title": "Carousel"
+      },
+      "blocks": [
+        {
+          "type": "slide"
+        },
+        {
+          "type": "slide"
+        }
+      ]
+    }
+  ],
+  "locales": {
+    "en": {
+      "title": "Carousel"
+    },
+    "fr": {
+      "title": "Diaporama"
+    }
+  },
+  "enabled_on": {
+    "templates": ["*"],
+    "groups": ["footer"]
+  }
+}
+{% endschema %}

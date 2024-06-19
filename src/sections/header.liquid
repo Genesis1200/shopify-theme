@@ -1,23 +1,29 @@
-<div class="bg-[black] px-6 py-4 flex justify-between items-center">
+<nav class="bg-[black] px-6 py-4 flex justify-between items-center">
   <div class="text-white font-bold">
     <ul class="flex gap-x-3 uppercase">
-      <li class="list-item">
-        <a class="text-lg" href="#"> women </a>
+      <li class="women">
+        <a class="text-lg hover:underline hover:decoration-2 hover:decoration-[#FFD43B]" href="#"> women </a>
+        <div class="women-products">
+          <ul class="">
+            <li class="text-black">test</li>
+            <li>test</li>
+          </ul>
+        </div>
       </li>
       <li class="list-item">
-        <a class="text-lg" href="#"> men </a>
+        <a class="text-lg hover:underline hover:decoration-2 hover:decoration-[#FFD43B]" href="#"> men </a>
       </li>
       <li class="list-item">
-        <a class="text-lg" href="#"> kids </a>
+        <a class="text-lg hover:underline hover:decoration-2 hover:decoration-[#FFD43B]" href="#"> kids </a>
       </li>
       <li class="list-item">
-        <a class="text-lg" href="#"> accessories </a>
+        <a class="text-lg hover:underline hover:decoration-2 hover:decoration-[#FFD43B]" href="#"> accessories </a>
       </li>
       <li class="list-item">
-        <a class="text-lg" href="#"> sale </a>
+        <a class="text-lg hover:underline hover:decoration-2 hover:decoration-[#FFD43B]" href="#"> sale </a>
       </li>
       <li class="list-item">
-        <a class="text-lg" href="#"> resale </a>
+        <a class="text-lg  hover:underline hover:decoration-2 hover:decoration-[#FFD43B]" href="#"> resale </a>
       </li>
     </ul>
   </div>
@@ -25,4 +31,14 @@
   <div class="flex">
     <input class="placeholder:text-white bg-[#495057] w-96" type="text" placeholder="What can we help you find?">
   </div>
-</div>
+</nav>
+
+<style>
+  .women-products {
+    display: none;
+  }
+
+  .women:hover .women-products {
+    display: block;
+  }
+</style>
