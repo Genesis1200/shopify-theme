@@ -1,13 +1,32 @@
 <nav class="bg-[black] px-6 py-4 flex justify-between items-center">
   <div class="text-white font-bold">
     <ul class="flex gap-x-3 uppercase">
-      <li class="women">
-        <a class="text-lg hover:underline hover:decoration-2 hover:decoration-[#FFD43B]" href="#"> women </a>
-        <div class="women-products">
-          <ul class="">
-            <li class="text-black">test</li>
-            <li>test</li>
-          </ul>
+      <li class="dropdown">
+        <a class=" drop-btn text-lg hover:underline hover:decoration-2 hover:decoration-[#FFD43B]" href="#"> women </a>
+        <div class="dropdown-content top-[7.2rem] left-0 w-full z-10">
+          <div class="px-24 py-5 flex">
+            <ul class="gap-y-2 flex flex-col w-[150px] pr-5">
+              <li><a class="text-black" href="#">test 1</a></li>
+              <li><a class="text-black" href="#">test 2</a></li>
+              <li><a class="text-black" href="#">test 3</a></li>
+            </ul>
+            <ul class="gap-y-2 flex flex-col w-[150px] pr-5">
+              <li><a class="text-black" href="#">test 1</a></li>
+              <li><a class="text-black" href="#">test 2</a></li>
+              <li><a class="text-black" href="#">test 3</a></li>
+              <li><a class="text-black" href="#">blah blah</a></li>
+              <li><a class="text-black" href="#">blah blah blah</a></li>
+            </ul>
+            <ul class="gap-y-2 flex flex-col w-[150px] pr-5">
+              <li><a class="text-black" href="#">test 1</a></li>
+              <li><a class="text-black" href="#">test 2</a></li>
+              <li><a class="text-black" href="#">test 3</a></li>
+              <li><a class="text-black" href="#">blah blah</a></li>
+              <li><a class="text-black" href="#">blah blah blah</a></li>
+              <li><a class="text-black" href="#">blah blah more words</a></li>
+              <li><a class="text-black" href="#">blah blah blah</a></li>
+            </ul>
+          </div>
         </div>
       </li>
       <li class="list-item">
@@ -20,7 +39,9 @@
         <a class="text-lg hover:underline hover:decoration-2 hover:decoration-[#FFD43B]" href="#"> accessories </a>
       </li>
       <li class="list-item">
-        <a class="text-lg hover:underline hover:decoration-2 hover:decoration-[#FFD43B]" href="#"> sale </a>
+        <a class="text-lg text-[#E64980] hover:underline hover:decoration-2 hover:decoration-[#FFD43B]" href="#">
+          sale
+        </a>
       </li>
       <li class="list-item">
         <a class="text-lg  hover:underline hover:decoration-2 hover:decoration-[#FFD43B]" href="#"> resale </a>
@@ -34,11 +55,22 @@
 </nav>
 
 <style>
-  .women-products {
+  .dropdown-content {
     display: none;
+    position: absolute;
+    background-color: white;
   }
 
-  .women:hover .women-products {
+  .dropdown-content a {
+    text-decoration: none;
+    display: block;
+  }
+
+  .dropdown-content a:hover {
+    text-decoration: underline;
+  }
+
+  .dropdown:hover .dropdown-content {
     display: block;
   }
 </style>
