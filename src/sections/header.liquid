@@ -3,7 +3,7 @@
     <ul class="flex gap-x-3 uppercase">
       <li class="dropdown">
         <a class=" drop-btn text-lg hover:underline hover:decoration-2 hover:decoration-[#FFD43B]" href="#"> women </a>
-        <div class="dropdown-content top-[7.2rem] left-0 w-full z-10">
+        <div class="dropdown-content pt-[1rem] left-0 w-full z-10">
           <div class="px-24 py-5 flex">
             <ul class="gap-y-2 flex flex-col w-[150px] pr-5">
               <li><a class="text-black" href="#">test 1</a></li>
@@ -71,6 +71,10 @@
   }
 
   .dropdown:hover .dropdown-content {
+    display: block;
+  }
+
+  .dropdown-content:hover {
     display: block;
   }
 </style>
