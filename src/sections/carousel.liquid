@@ -6,45 +6,10 @@
   </div>
 
   <div class="">
-    <div class="flex">
-      <div class="flex  items-center">
-        <button class="inline mr-2 rounded-full bg-[#FFD43B]" id="prev-btn">L</button>
-      </div>
-      <div class="" id="item-list">
-        <div>
-          <a href="#" id="1">
-            <img height="190px" width="230px" src="https://placehold.co/190x230">
-          </a>
-        </div>
-        <div>
-          <a href="#" id="2">
-            <img height="190px" width="230px" src="https://placehold.co/190x230">
-          </a>
-        </div>
-        <div>
-          <a href="#" id="3">
-            <img height="190px" width="230px" src="https://placehold.co/190x230">
-          </a>
-        </div>
-        <div>
-          <a href="#" id="4">
-            <img height="190px" width="230px" src="https://placehold.co/190x230">
-          </a>
-        </div>
-        <div>
-          <a href="#" id="5">
-            <img height="190px" width="230px" src="https://placehold.co/190x230">
-          </a>
-        </div>
-      </div>
-      <div class="flex  items-center" id="item">
-        <button class="inline ml-2 rounded-full bg-[#FFD43B]" id="next-btn">R</button>
-      </div>
-    </div>
-  </div>
+    
 </div>
 
-<div class="overflow-hidden">
+<div class="overflow-hidden bg-red-400 w-[1200px]">
   <div class="multiple-items" id="item-list">
     <div>
       <a href="#" id="1">
@@ -75,19 +40,6 @@
 </div>
 
 <script>
-  {% comment %} const prev = document.getElementById('prev-btn');
-  const next = document.getElementById('next-btn');
-  const list = document.getElementById('item-list');
-  const itemWidth = 150;
-  const padding = 10;
-
-  prev.addEventListener('click', () => {
-    list.scrollLeft -= itemWidth + padding;
-  });
-  next.addEventListener('click', () => {
-    list.scrollLeft += itemWidth + padding;
-  }); {% endcomment %}
-
   $(document).ready(function(){
     $('.multiple-items').slick({
       infinite: true,
