@@ -1,4 +1,45 @@
-<div class="bg-[#222] p-2 flex justify-center gap-x-40 text-[#FFD43B] font-extralight uppercase fixed w-full z-10">
-  <a class="hover:underline" href="#">10% Off first order!</a>
-  <a class="hover:underline" href="#">Free shipping blah blah</a>
+<div class="words-wrapper bg-[#222] p-2 flex justify-center gap-x-40 lg:text-base text-xs  text-[#FFD43B] font-extralight uppercase lg:fixed lg:w-full lg:z-10">
+  <span class="words flex gap-x-40">
+    <span class="current"><a class="hover:underline" href="#">10% Off first order!</a></span>
+    <span><a class="hover:underline" href="#">Free shipping blah blah</a></span>
+  </span>
 </div>
+
+<style>
+  @media (max-width: 1024px) {
+    .words-wrapper {
+      font-size: 20px;
+      text-align: center;
+    }
+    .words-wrapper .css {
+      color: #2ec4b6;
+    }
+    .words-wrapper .words {
+      display: inline-grid;
+      padding: 0 10px;
+      border-radius: 6px;
+    }
+    .words-wrapper .words span {
+      grid-area: 1/1;
+      display: none;
+    }
+    .words-wrapper .words span.current {
+      display: block;
+    }
+
+    a {
+      color: ##ffd43b;
+    }
+  }
+</style>
+
+<script>
+  const wrapper = document.querySelector('.words');
+  const CURRENT_CLASS = 'current';
+  setInterval(() => {
+    const currentWord = wrapper.querySelector('span.current');
+    const nextWord = currentWord.nextElementSibling ? currentWord.nextElementSibling : wrapper.firstElementChild;
+    currentWord.classList.remove(CURRENT_CLASS);
+    nextWord.classList.add(CURRENT_CLASS);
+  }, 3000);
+</script>

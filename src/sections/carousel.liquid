@@ -1,52 +1,137 @@
-<div class="grid justify-center">
+<div class="grid justify-center pb-7 lg:mt-0 mt-60">
   <div class="flex justify-center">
-    <h2 class="text-2xl font-bold uppercase inline-block border-2 border-black my-12 py-2 px-4 cursor-pointer">
+    <h2 class="text-2xl font-bold uppercase inline-block border-2 border-black my-8 py-2 px-4 cursor-pointer">
       <a>shop new arrivals</a>
     </h2>
   </div>
 
-  <div class="">
-    
-</div>
-
-<div class="overflow-hidden bg-red-400 w-[1200px]">
-  <div class="multiple-items" id="item-list">
-    <div>
-      <a href="#" id="1">
-        <img height="190px" width="230px" src="https://placehold.co/190x230">
-      </a>
-    </div>
-    <div>
-      <a href="#" id="2">
-        <img height="190px" width="230px" src="https://placehold.co/190x230">
-      </a>
-    </div>
-    <div>
-      <a href="#" id="3">
-        <img height="190px" width="230px" src="https://placehold.co/190x230">
-      </a>
-    </div>
-    <div>
-      <a href="#" id="4">
-        <img height="190px" width="230px" src="https://placehold.co/190x230">
-      </a>
-    </div>
-    <div>
-      <a href="#" id="5">
-        <img height="190px" width="230px" src="https://placehold.co/190x230">
-      </a>
+  <div class="mx-auto flex items-center content-center">
+    <div class="wrapper flex max-w-[1250px] w-full">
+      <div class="btn flex  items-center" id="right">
+        <button class="inline mr-2 rounded-full bg-[#FFF]" id="next-btn">&larr;</button>
+      </div>
+      <div class="carousel flex">
+        <div class="card">
+          <a href="#" class="flex flex-col">
+            <img height="190px" width="230px" src="https://placehold.co/190x230">
+            <span>Product name</span>
+            <span>$0.00</span>
+          </a>
+        </div>
+        <div class="card">
+          <a href="#" class="flex flex-col">
+            <img height="190px" width="230px" src="https://placehold.co/190x230">
+            <span>Product name</span>
+            <span>$0.00</span>
+          </a>
+        </div>
+        <div class="card">
+          <a href="#" class="flex flex-col">
+            <img height="190px" width="230px" src="https://placehold.co/190x230">
+            <span>Product name</span>
+            <span>$0.00</span>
+          </a>
+        </div>
+        <div class="card">
+          <a href="#" class="flex flex-col">
+            <img height="190px" width="230px" src="https://placehold.co/190x230">
+            <span>Product name</span>
+            <span>$0.00</span>
+          </a>
+        </div>
+        <div class="card">
+          <a href="#" class="flex flex-col">
+            <img height="190px" width="230px" src="https://placehold.co/190x230">
+            <span>Product name</span>
+            <span>$0.00</span>
+          </a>
+        </div>
+        <div class="card">
+          <a href="#" class="flex flex-col">
+            <img height="190px" width="230px" src="https://placehold.co/190x230">
+            <span>Product name</span>
+            <span>$0.00</span>
+          </a>
+        </div>
+      </div>
+      <div class="btn flex  items-center" id="left">
+        <button class="inline ml-2 rounded-full bg-[#FFF]" id="next-btn">&rarr;</button>
+      </div>
     </div>
   </div>
 </div>
 
+<style>
+  .wrapper .carousel {
+    display: grid;
+    grid-auto-flow: column;
+    grid-auto-columns: 190px;
+    gap: 16px;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    scroll-behavior: smooth;
+  }
+
+  .carousel .card {
+    max-height: 300px;
+    list-style: none;
+    background: #fff;
+    border-radius: 8px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding-bottom: 15px;
+    cursor: pointer;
+  }
+
+  .carousel.no-transition {
+    scroll-behavior: auto;
+  }
+
+  .carousel::-webkit-scrollbar {
+    display: none;
+  }
+</style>
+
 <script>
-  $(document).ready(function(){
-    $('.multiple-items').slick({
-      infinite: true,
-      slidesToShow: 3,
-      slidesToScroll: 3
+  const carousel = document.querySelector('.carousel');
+  const arrowBtns = document.querySelectorAll('.wrapper .btn');
+  const firstCardWidth = carousel.querySelector('.card').offsetWidth;
+  const carouselChildrens = [...carousel.children];
+
+  arrowBtns.forEach((btn) => {
+    btn.addEventListener('click', () => {
+      carousel.scrollLeft += btn.id === 'right' ? -firstCardWidth : firstCardWidth;
     });
   });
+
+  let cardPerView = Math.round(carousel.offsetWidth / firstCardWidth);
+
+  carouselChildrens
+    .slice(-cardPerView)
+    .reverse()
+    .forEach((card) => {
+      carousel.insertAdjacentHTML('afterBegin', card.outerHTML);
+    });
+
+  carouselChildrens.slice(0, cardPerView).forEach((card) => {
+    carousel.insertAdjacentHTML('beforeEnd', card.outerHTML);
+  });
+
+  const infiniteScroll = () => {
+    if (carousel.scrollLeft === 0) {
+      carousel.classList.add('no-transition');
+      carousel.scrollLeft = carousel.scrollWidth - 2 * carousel.offsetWidth;
+      carousel.classList.remove('no-transition');
+    } else if (Math.ceil(carousel.scrollLeft === carousel.scrollWidth - carousel.offsetWidth)) {
+      carousel.classList.add('no-transition');
+      carousel.scrollLeft = carousel.offsetWidth;
+      carousel.classList.remove('no-transition');
+    }
+  };
+
+  carousel.addEventListener('scroll', infiniteScroll);
 </script>
 
 {% schema %}

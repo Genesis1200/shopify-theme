@@ -5,41 +5,138 @@
       <p class="mb-5">Tag us online @blah! blah blah blah</p>
     </div>
 
-    <div class="w-[90%] mx-auto">
-      <div class="flex">
-        <div class="flex  items-center">
-          <button class="inline mr-2 rounded-full bg-[#FFD43B]" id="next-btn">L</button>
+    <div class="mx-auto flex items-center justify-center">
+      <div class="wrapper2 flex max-w-[1100px] w-full relative">
+        <div class="btn2 flex  items-center" id="right">
+          <button class="inline mr-2 rounded-full bg-[#FFF]" id="next-btn">&larr;</button>
         </div>
-        <div class="flex gap-x-3 scroll-smooth overflow-auto snap-x snap-mandatory">
-          <a href="#" class="snap-center">
-            <img height="300px" width="300px" src="https://placehold.co/300x300">
-          </a>
-          <a href="#" class="snap-center">
-            <img height="300px" width="300px" src="https://placehold.co/300x300">
-          </a>
-          <a href="#" class="snap-center">
-            <img height="300px" width="300px" src="https://placehold.co/300x300">
-          </a>
-          <a href="#" snap="snap-center">
-            <img height="300px" width="300px" src="https://placehold.co/300x300">
-          </a>
+        <div class="carousel2 flex">
+          <div class="card2">
+            <a href="#" class="">
+              <img height="300px" width="300px" src="https://placehold.co/300x300">
+            </a>
+          </div>
+          <div class="card2">
+            <a href="#" class="">
+              <img height="300px" width="300px" src="https://placehold.co/300x300">
+            </a>
+          </div>
+          <div class="card2">
+            <a href="#" class="">
+              <img height="300px" width="300px" src="https://placehold.co/300x300">
+            </a>
+          </div>
+          <div class="card2">
+            <a href="#" class="">
+              <img height="300px" width="300px" src="https://placehold.co/300x300">
+            </a>
+          </div>
+          <div class="card2">
+            <a href="#" class="">
+              <img height="300px" width="300px" src="https://placehold.co/300x300">
+            </a>
+          </div>
+          <div class="card2">
+            <a href="#" class="">
+              <img height="300px" width="300px" src="https://placehold.co/300x300">
+            </a>
+          </div>
         </div>
-        <div class="flex  items-center">
-          <button class="inline ml-2 rounded-full bg-[#FFD43B]" id="next-btn">R</button>
+        <div class="btn2 flex items-center" id="left">
+          <button class="inline ml-2 rounded-full bg-[#FFF]" id="next-btn">&rarr;</button>
         </div>
       </div>
     </div>
 
     <div class="mt-12 flex justify-center gap-4">
       <div>
-        <a class="bg-[#FFD43B] text-xl font-semibold uppercase py-2.5 px-5" href="#">view more</a>
+        <a class="bg-[#FFD43B] text-xl font-semibold uppercase py-2.5 px-5 hover:bg-black hover:text-white" href="#"
+          >view more</a
+        >
       </div>
       <div>
-        <a class="border-2 border-black text-xl font-semibold uppercase py-2.5 px-5" href="#">upload image</a>
+        <a
+          class="border-2 border-black text-xl font-semibold uppercase py-2.5 px-5 hover:bg-black hover:text-white"
+          href="#"
+          >upload image</a
+        >
       </div>
     </div>
   </div>
 </div>
+
+<style>
+  .wrapper2 .carousel2 {
+    display: grid;
+    grid-auto-flow: column;
+    grid-auto-columns: 300px;
+    gap: 16px;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    scroll-behavior: smooth;
+  }
+
+  .carousel2 .card- {
+    height: 300px;
+    list-style: none;
+    background: #fff;
+    border-radius: 8px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding-bottom: 15px;
+    cursor: pointer;
+  }
+
+  .carousel2.no-transition {
+    scroll-behavior: auto;
+  }
+
+  .carousel2::-webkit-scrollbar {
+    display: none;
+  }
+</style>
+
+<script>
+  const carousel = document.querySelector('.carousel2');
+  const arrowBtns = document.querySelectorAll('.wrapper2 .btn2');
+  const firstCardWidth = carousel.querySelector('.card2').offsetWidth;
+  const carouselChildrens = [...carousel2.children];
+
+  arrowBtns.forEach((btn2) => {
+    btn2.addEventListener('click', () => {
+      carousel.scrollLeft += btn2.id === 'right' ? -firstCardWidth : firstCardWidth;
+    });
+  });
+
+  let cardPerView = Math.round(carousel.offsetWidth / firstCardWidth);
+
+  carouselChildrens
+    .slice(-cardPerView)
+    .reverse()
+    .forEach((card2) => {
+      carousel.insertAdjacentHTML('afterBegin', card2.outerHTML);
+    });
+
+  carouselChildrens.slice(0, cardPerView).forEach((card2) => {
+    carousel.insertAdjacentHTML('beforeEnd', card2.outerHTML);
+  });
+
+  const infiniteScroll = () => {
+    if (carousel.scrollLeft === 0) {
+      carousel.classList.add('no-transition');
+      carousel.scrollLeft = carousel.scrollWidth - 2 * carousel.offsetWidth;
+      carousel.classList.remove('no-transition');
+    } else if (Math.ceil(carousel.scrollLeft === carousel.scrollWidth - carousel.offsetWidth)) {
+      carousel.classList.add('no-transition');
+      carousel.scrollLeft = carousel.offsetWidth;
+      carousel.classList.remove('no-transition');
+    }
+  };
+
+  carousel.addEventListener('scroll', infiniteScroll);
+</script>
 
 {% schema %}
 {
