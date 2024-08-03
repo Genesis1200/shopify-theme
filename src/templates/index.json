@@ -1,12 +1,3 @@
-/*
-* ------------------------------------------------------------
-* IMPORTANT: The contents of this file are auto-generated.
-*
-* This file may be updated by the Shopify admin theme editor
-* or related systems. Please exercise caution as any changes
-* made to this file may be overwritten.
-* ------------------------------------------------------------
-*/
 {
   "sections": {
     "main": {
@@ -102,23 +93,67 @@
         "title": "Carousel"
       }
     },
-    "footer_dD9UxX": {
-      "type": "footer",
+    "footer_top_FMzcHQ": {
+      "type": "footer-top",
       "blocks": {
-        "slide_jFBinX": {
+        "slide_icCUyG": {
           "type": "slide",
           "settings": {
           }
         },
-        "slide_Pdw9cY": {
+        "slide_kAzVwt": {
           "type": "slide",
           "settings": {
           }
         }
       },
       "block_order": [
-        "slide_jFBinX",
-        "slide_Pdw9cY"
+        "slide_icCUyG",
+        "slide_kAzVwt"
+      ],
+      "settings": {
+        "title": "Carousel"
+      }
+    },
+    "footer_bottom_desktop_wVDLzQ": {
+      "type": "footer-bottom-desktop",
+      "blocks": {
+        "slide_JkkKxk": {
+          "type": "slide",
+          "settings": {
+          }
+        },
+        "slide_AGfNr8": {
+          "type": "slide",
+          "settings": {
+          }
+        }
+      },
+      "block_order": [
+        "slide_JkkKxk",
+        "slide_AGfNr8"
+      ],
+      "settings": {
+        "title": "Carousel"
+      }
+    },
+    "footer_bottom_mobile_VRE9YA": {
+      "type": "footer-bottom-mobile",
+      "blocks": {
+        "slide_Wa7xnx": {
+          "type": "slide",
+          "settings": {
+          }
+        },
+        "slide_WbUD6G": {
+          "type": "slide",
+          "settings": {
+          }
+        }
+      },
+      "block_order": [
+        "slide_Wa7xnx",
+        "slide_WbUD6G"
       ],
       "settings": {
         "title": "Carousel"
@@ -131,6 +166,8 @@
     "homepage_content_z34pG3",
     "homepage_content_2_rbgk8F",
     "carousel_2_99PK9w",
-    "footer_dD9UxX"
+    "footer_top_FMzcHQ",
+    "footer_bottom_desktop_wVDLzQ",
+    "footer_bottom_mobile_VRE9YA"
   ]
 }

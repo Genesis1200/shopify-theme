@@ -1,0 +1,158 @@
+<div class="bg-black block md:hidden">
+  <div class="max-w-[1064px] flex flex-col border-t mx-auto py-11 px-6">
+    <div class="dropdown">
+      <div class="dropbtn flex justify-between cursor-pointer">
+        <p class="text-white text-lg uppercase mb-2.5">about us</p>
+        <div>
+          <a class="text-[#FFF]"><img class="w-5" src="{{ 'chevron-icon.svg' | asset_url }}"></a>
+        </div>
+      </div>
+      <div class="dropdown-content bg-black">
+        <a href="#" class="text-[#adb5bd] bg-black uppercase hover:underline">blah</a>
+        <a href="#" class="text-[#adb5bd] bg-black uppercase hover:underline">blah blah</a>
+        <a href="#" class="text-[#adb5bd] bg-black uppercase hover:underline">blah</a>
+        <a href="#" class="text-[#adb5bd] bg-black uppercase hover:underline">blah</a>
+        <a href="#" class="text-[#adb5bd] bg-black uppercase hover:underline">blahblah</a>
+      </div>
+    </div>
+    <div class="dropdown">
+      <div class="dropbtn flex justify-between cursor-pointer">
+        <p class="text-white text-lg uppercase mb-2.5">info</p>
+        <div>
+          <a class="text-[#FFF]"><img class="w-5" src="{{ 'chevron-icon.svg' | asset_url }}"></a>
+        </div>
+      </div>
+      <div class="dropdown-content bg-black">
+        <a href="#" class="text-[#adb5bd] bg-black uppercase hover:underline">blah</a>
+        <a href="#" class="text-[#adb5bd] bg-black uppercase hover:underline">blah blah</a>
+        <a href="#" class="text-[#adb5bd] bg-black uppercase hover:underline">blah</a>
+        <a href="#" class="text-[#adb5bd] bg-black uppercase hover:underline">blahblah</a>
+      </div>
+    </div>
+    <div class="dropdown">
+      <div class="dropbtn flex justify-between cursor-pointer">
+        <p class="text-white text-lg uppercase mb-2.5">other stuff</p>
+        <div>
+          <a class="text-[#FFF]"><img class="w-5" src="{{ 'chevron-icon.svg' | asset_url }}"></a>
+        </div>
+      </div>
+      <div class="dropdown-content">
+        <a href="#" class="text-[#adb5bd] bg-black uppercase hover:underline">blah</a>
+        <a href="#" class="text-[#adb5bd] bg-black uppercase hover:underline">blah blah</a>
+        <a href="#" class="text-[#adb5bd] bg-black uppercase hover:underline">blah</a>
+      </div>
+    </div>
+    <div class="dropdown">
+      <div class="dropbtn flex justify-between cursor-pointer">
+        <p class="text-white text-lg uppercase mb-2.5">other other stuff</p>
+        <div>
+          <a class="text-[#FFF]"><img class="w-5" src="{{ 'chevron-icon.svg' | asset_url }}"></a>
+        </div>
+      </div>
+      <div class="dropdown-content">
+        <a href="#" class="text-[#adb5bd] bg-black uppercase hover:underline">blah</a>
+        <a href="#" class="text-[#adb5bd] bg-black uppercase hover:underline">blah blah</a>
+        <a href="#" class="text-[#adb5bd] bg-black uppercase hover:underline">blah</a>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="bg-[#222] md:hidden block">
+  <div class="px-5 py-3">
+    <div class="flex justify-center gap-3 mb-2.5">
+      <a href="#" class="hover:opacity-75"><img class="w-4" src="{{ 'facebook.svg' | asset_url }}"></a>
+      <a href="#" class="hover:opacity-75"><img class="w-4" src="{{ 'x-twitter.svg' | asset_url }}"></a>
+      <a href="#" class="hover:opacity-75"><img class="w-4" src="{{ 'instagram.svg' | asset_url }}"></a>
+      <a href="#" class="hover:opacity-75"><img class="w-4" src="{{ 'tiktok.svg' | asset_url }}"></a>
+      <a href="#" class="hover:opacity-75"><img class="w-5" src="{{ 'youtube.svg' | asset_url }}"></a>
+    </div>
+
+    <div class="flex justify-center mx-auto max-w-[1000px]">
+      <div><p class="text-[#868e96] uppercase">&copy 2024 blah blah</p></div>
+      <div class="hidden"><p class="text-[#868e96] uppercase">#blahblahblah</p></div>
+    </div>
+  </div>
+</div>
+
+<script>
+  let myMediaQuery = window.matchMedia('(max-width: 768px)');
+
+  function widthChangeCallback(myMediaQuery) {
+    if (myMediaQuery.matches) {
+      var dropdown = document.getElementsByClassName('dropbtn');
+      var i;
+
+      for (i = 0; i < dropdown.length; i++) {
+        dropdown[i].addEventListener('click', function () {
+          this.classList.toggle('active');
+          var dropdownContent = this.nextElementSibling;
+          if (dropdownContent.style.display === 'block') {
+            dropdownContent.style.display = 'none';
+          } else {
+            dropdownContent.style.display = 'block';
+          }
+        });
+      }
+    }
+  }
+  myMediaQuery.addEventListener('change', widthChangeCallback);
+</script>
+
+{% schema %}
+{
+  "name": "footer-bottom-mobile",
+  "tag": "section",
+  "class": "footer",
+  "limit": 1,
+  "settings": [
+    {
+      "type": "text",
+      "id": "title",
+      "label": "footer"
+    }
+  ],
+  "max_blocks": 5,
+  "blocks": [
+    {
+      "name": "Slide",
+      "type": "slide",
+      "settings": [
+        {
+          "type": "image_picker",
+          "id": "image",
+          "label": "Image"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Carousel",
+      "settings": {
+        "title": "Carousel"
+      },
+      "blocks": [
+        {
+          "type": "slide"
+        },
+        {
+          "type": "slide"
+        }
+      ]
+    }
+  ],
+  "locales": {
+    "en": {
+      "title": "Carousel"
+    },
+    "fr": {
+      "title": "Diaporama"
+    }
+  },
+  "enabled_on": {
+    "templates": ["*"],
+    "groups": ["footer"]
+  }
+}
+{% endschema %}

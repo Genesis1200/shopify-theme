@@ -1,72 +1,97 @@
-<nav class="bg-[black] pb-2.5 pt-3.5 px-3.5 lg:px-10 lg:py-5 flex justify-center lg:justify-between items-center lg:fixed lg:w-full lg:z-10 lg:mt-10">
-  <div class="text-white font-bold">
-    <ul class="flex gap-x-3 uppercase">
-      <li class="dropdown">
-        <a
-          class=" drop-btn lg:text-lg text-base hover:underline hover:decoration-2 hover:decoration-[#FFD43B]"
-          href="#"
-        >
-          women
-        </a>
-        <div class="dropdown-content pt-[1rem] left-0 w-full z-10">
-          <div class="px-24 py-5 flex">
-            <ul class="gap-y-2 flex flex-col w-[150px] pr-5">
-              <li><a class="text-black" href="#">test 1</a></li>
-              <li><a class="text-black" href="#">test 2</a></li>
-              <li><a class="text-black" href="#">test 3</a></li>
-            </ul>
-            <ul class="gap-y-2 flex flex-col w-[150px] pr-5">
-              <li><a class="text-black" href="#">test 1</a></li>
-              <li><a class="text-black" href="#">test 2</a></li>
-              <li><a class="text-black" href="#">test 3</a></li>
-              <li><a class="text-black" href="#">blah blah</a></li>
-              <li><a class="text-black" href="#">blah blah blah</a></li>
-            </ul>
-            <ul class="gap-y-2 flex flex-col w-[150px] pr-5">
-              <li><a class="text-black" href="#">test 1</a></li>
-              <li><a class="text-black" href="#">test 2</a></li>
-              <li><a class="text-black" href="#">test 3</a></li>
-              <li><a class="text-black" href="#">blah blah</a></li>
-              <li><a class="text-black" href="#">blah blah blah</a></li>
-              <li><a class="text-black" href="#">blah blah more words</a></li>
-              <li><a class="text-black" href="#">blah blah blah</a></li>
-            </ul>
-          </div>
-        </div>
-      </li>
-      <li class="list-item">
-        <a class="lg:text-lg text-base hover:underline hover:decoration-2 hover:decoration-[#FFD43B]" href="#"> men </a>
-      </li>
-      <li class="list-item">
-        <a class="lg:text-lg text-base hover:underline hover:decoration-2 hover:decoration-[#FFD43B]" href="#">
-          kids
-        </a>
-      </li>
-      <li class="list-item">
-        <a class="lg:text-lg text-base hover:underline hover:decoration-2 hover:decoration-[#FFD43B]" href="#">
-          accessories
-        </a>
-      </li>
-      <li class="list-item">
-        <a
-          class="lg:text-lg text-base text-[#E64980] hover:underline hover:decoration-2 hover:decoration-[#FFD43B]"
-          href="#"
-        >
-          sale
-        </a>
-      </li>
-      <li class="list-item">
-        <a class="lg:text-lg text-base hover:underline hover:decoration-2 hover:decoration-[#FFD43B]" href="#">
-          resale
-        </a>
-      </li>
-    </ul>
+<div class="bg-black md:fixed md:w-full md:z-10 md:mt-8 lg:mt-10">
+  <div class="lg:hidden flex justify-between px-7 pt-3.5 ">
+    <div>
+      <a href="#"><img class="w-7" src="{{ 'magnifying-glass.svg' | asset_url }}"></a>
+    </div>
+    <div class="flex">
+      <a href="#"><img class="w-7" src="{{ 'user.svg' | asset_url }}"></a>
+      <a href="#"><img class="w-7 ml-2.5" src="{{ 'cart.svg' | asset_url }}"></a>
+    </div>
   </div>
 
-  <div class="hidden lg:block lg:flex">
-    <input class="placeholder:text-white bg-[#495057] w-96" type="text" placeholder="What can we help you find?">
-  </div>
-</nav>
+  <nav class="bg-black pb-2.5 pt-3.5 px-3.5 md:py-5 flex md:justify-between">
+    <div class="text-white font-bold flex items-center">
+      <ul class="flex uppercase">
+        <li class="dropdown">
+          <a
+            class=" drop-btn mx-4 lg:text-lg text-base hover:underline hover:decoration-2 hover:decoration-[#FFD43B]"
+            href="#"
+          >
+            women
+          </a>
+          <div class="dropdown-content pt-[1rem] left-0 w-full z-10">
+            <div class="px-24 py-5 flex">
+              <ul class="gap-y-2 flex flex-col w-[150px] pr-5">
+                <li><a class="text-black" href="#">test 1</a></li>
+                <li><a class="text-black" href="#">test 2</a></li>
+                <li><a class="text-black" href="#">test 3</a></li>
+              </ul>
+              <ul class="gap-y-2 flex flex-col w-[150px] pr-5">
+                <li><a class="text-black" href="#">test 1</a></li>
+                <li><a class="text-black" href="#">test 2</a></li>
+                <li><a class="text-black" href="#">test 3</a></li>
+                <li><a class="text-black" href="#">blah blah</a></li>
+                <li><a class="text-black" href="#">blah blah blah</a></li>
+              </ul>
+              <ul class="gap-y-2 flex flex-col w-[150px] pr-5">
+                <li><a class="text-black" href="#">test 1</a></li>
+                <li><a class="text-black" href="#">test 2</a></li>
+                <li><a class="text-black" href="#">test 3</a></li>
+                <li><a class="text-black" href="#">blah blah</a></li>
+                <li><a class="text-black" href="#">blah blah blah</a></li>
+                <li><a class="text-black" href="#">blah blah more words</a></li>
+                <li><a class="text-black" href="#">blah blah blah</a></li>
+              </ul>
+            </div>
+          </div>
+        </li>
+        <li class="list-item">
+          <a class="lg:text-lg mr-4 text-base hover:underline hover:decoration-2 hover:decoration-[#FFD43B]" href="#">
+            men
+          </a>
+        </li>
+        <li class="list-item">
+          <a class="lg:text-lg mr-4 text-base hover:underline hover:decoration-2 hover:decoration-[#FFD43B]" href="#">
+            kids
+          </a>
+        </li>
+        <li class="list-item">
+          <a class="lg:text-lg mr-4 text-base hover:underline hover:decoration-2 hover:decoration-[#FFD43B]" href="#">
+            accessories
+          </a>
+        </li>
+        <li class="list-item">
+          <a
+            class="lg:text-lg mr-4 text-base text-[#E64980] hover:underline hover:decoration-2 hover:decoration-[#FFD43B]"
+            href="#"
+          >
+            sale
+          </a>
+        </li>
+        <li class="list-item">
+          <a class="lg:text-lg mr-4 text-base hover:underline hover:decoration-2 hover:decoration-[#FFD43B]" href="#">
+            resale
+          </a>
+        </li>
+      </ul>
+    </div>
+
+    <div class="hidden lg:block lg:flex">
+      <div class="flex bg-[#495057]">
+        <img class="w-5 ml-2.5" src="{{ 'magnifying-glass.svg' | asset_url }}">
+        <input
+          class="placeholder:text-white bg-[#495057] border-none w-96"
+          type="text"
+          placeholder="What can we help you find?"
+        >
+      </div>
+      <div class="flex items-center ml-4">
+        <a href="#"><img class="w-7" src="{{ 'user.svg' | asset_url }}"></a>
+        <a href="#"><img class="w-7 ml-2.5" src="{{ 'cart.svg' | asset_url }}"></a>
+      </div>
+    </div>
+  </nav>
+</div>
 
 <style>
   .dropdown-content {

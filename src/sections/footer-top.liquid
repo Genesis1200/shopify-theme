@@ -1,0 +1,106 @@
+<div class="mt-20">
+  <div class="bg-[#222] md:flex md:justify-center">
+    <div class="px-7 pb-5 pt-4 md:px-10 md:pt-10 md:pb-11">
+      <h3 class="text-white text-lg uppercase font-semibold mt-5 mb-2.5">sign up for email</h3>
+      <p class="text-[#FFD43B] mt-3.5  mb-1">blah blah blah</p>
+      <div class="flex mt-5">
+        <div class="w-full">
+          <input
+            class="placeholder:text-[#ADB5BD] bg-white w-full md:w-72"
+            type="text"
+            placeholder="Enter your email address"
+          >
+        </div>
+        <div class="flex">
+          <a class="bg-[#FFD43B] border border-[#222] text-black text-lg tracking-wider font-semibold uppercase flex items-center justify-center min-w-40 md:min-w-48 px-4"
+            >sign up</a
+          >
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+{% comment %}
+  <script>
+    let myMediaQuery = window.matchMedia('(max-width: 768px)');
+
+    function widthChangeCallback(myMediaQuery) {
+      if (myMediaQuery.matches) {
+        var dropdown = document.getElementsByClassName('dropbtn');
+        var i;
+
+        for (i = 0; i < dropdown.length; i++) {
+          dropdown[i].addEventListener('click', function () {
+            this.classList.toggle('active');
+            var dropdownContent = this.nextElementSibling;
+            if (dropdownContent.style.display === 'block') {
+              dropdownContent.style.display = 'none';
+            } else {
+              dropdownContent.style.display = 'block';
+            }
+          });
+        }
+      }
+    }
+    myMediaQuery.addEventListener('change', widthChangeCallback);
+  </script>
+{% endcomment %}
+
+{% schema %}
+{
+  "name": "footer-top",
+  "tag": "section",
+  "class": "footer",
+  "limit": 1,
+  "settings": [
+    {
+      "type": "text",
+      "id": "title",
+      "label": "footer"
+    }
+  ],
+  "max_blocks": 5,
+  "blocks": [
+    {
+      "name": "Slide",
+      "type": "slide",
+      "settings": [
+        {
+          "type": "image_picker",
+          "id": "image",
+          "label": "Image"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Carousel",
+      "settings": {
+        "title": "Carousel"
+      },
+      "blocks": [
+        {
+          "type": "slide"
+        },
+        {
+          "type": "slide"
+        }
+      ]
+    }
+  ],
+  "locales": {
+    "en": {
+      "title": "Carousel"
+    },
+    "fr": {
+      "title": "Diaporama"
+    }
+  },
+  "enabled_on": {
+    "templates": ["*"],
+    "groups": ["footer"]
+  }
+}
+{% endschema %}
