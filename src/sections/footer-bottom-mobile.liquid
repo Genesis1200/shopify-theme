@@ -7,12 +7,14 @@
           <a class="text-[#FFF]"><img class="w-5" src="{{ 'chevron-icon.svg' | asset_url }}"></a>
         </div>
       </div>
-      <div class="dropdown-content bg-black">
-        <a href="#" class="text-[#adb5bd] bg-black uppercase hover:underline">blah</a>
-        <a href="#" class="text-[#adb5bd] bg-black uppercase hover:underline">blah blah</a>
-        <a href="#" class="text-[#adb5bd] bg-black uppercase hover:underline">blah</a>
-        <a href="#" class="text-[#adb5bd] bg-black uppercase hover:underline">blah</a>
-        <a href="#" class="text-[#adb5bd] bg-black uppercase hover:underline">blahblah</a>
+      <div class="dropdown-content hidden">
+        <div class="flex flex-col">
+          <a href="#" class="text-[#adb5bd] bg-black uppercase mb-2.5 hover:underline">blah</a>
+          <a href="#" class="text-[#adb5bd] bg-black uppercase mb-2.5 hover:underline">blah blah</a>
+          <a href="#" class="text-[#adb5bd] bg-black uppercase mb-2.5 hover:underline">blah</a>
+          <a href="#" class="text-[#adb5bd] bg-black uppercase mb-2.5 hover:underline">blah</a>
+          <a href="#" class="text-[#adb5bd] bg-black uppercase mb-2.5 hover:underline">blahblah</a>
+        </div>
       </div>
     </div>
     <div class="dropdown">
@@ -22,11 +24,13 @@
           <a class="text-[#FFF]"><img class="w-5" src="{{ 'chevron-icon.svg' | asset_url }}"></a>
         </div>
       </div>
-      <div class="dropdown-content bg-black">
-        <a href="#" class="text-[#adb5bd] bg-black uppercase hover:underline">blah</a>
-        <a href="#" class="text-[#adb5bd] bg-black uppercase hover:underline">blah blah</a>
-        <a href="#" class="text-[#adb5bd] bg-black uppercase hover:underline">blah</a>
-        <a href="#" class="text-[#adb5bd] bg-black uppercase hover:underline">blahblah</a>
+      <div class="dropdown-content hidden">
+        <div class="flex flex-col">
+          <a href="#" class="text-[#adb5bd] bg-black uppercase mb-2.5 hover:underline">blah</a>
+          <a href="#" class="text-[#adb5bd] bg-black uppercase mb-2.5 hover:underline">blah blah</a>
+          <a href="#" class="text-[#adb5bd] bg-black uppercase mb-2.5 hover:underline">blah</a>
+          <a href="#" class="text-[#adb5bd] bg-black uppercase mb-2.5 hover:underline">blahblah</a>
+        </div>
       </div>
     </div>
     <div class="dropdown">
@@ -36,10 +40,12 @@
           <a class="text-[#FFF]"><img class="w-5" src="{{ 'chevron-icon.svg' | asset_url }}"></a>
         </div>
       </div>
-      <div class="dropdown-content">
-        <a href="#" class="text-[#adb5bd] bg-black uppercase hover:underline">blah</a>
-        <a href="#" class="text-[#adb5bd] bg-black uppercase hover:underline">blah blah</a>
-        <a href="#" class="text-[#adb5bd] bg-black uppercase hover:underline">blah</a>
+      <div class="dropdown-content hidden">
+        <div class="flex flex-col">
+          <a href="#" class="text-[#adb5bd] bg-black uppercase mb-2.5 hover:underline">blah</a>
+          <a href="#" class="text-[#adb5bd] bg-black uppercase mb-2.5 hover:underline">blah blah</a>
+          <a href="#" class="text-[#adb5bd] bg-black uppercase mb-2.5 hover:underline">blah</a>
+        </div>
       </div>
     </div>
     <div class="dropdown">
@@ -49,10 +55,12 @@
           <a class="text-[#FFF]"><img class="w-5" src="{{ 'chevron-icon.svg' | asset_url }}"></a>
         </div>
       </div>
-      <div class="dropdown-content">
-        <a href="#" class="text-[#adb5bd] bg-black uppercase hover:underline">blah</a>
-        <a href="#" class="text-[#adb5bd] bg-black uppercase hover:underline">blah blah</a>
-        <a href="#" class="text-[#adb5bd] bg-black uppercase hover:underline">blah</a>
+      <div class="dropdown-content hidden">
+        <div class="flex flex-col">
+          <a href="#" class="text-[#adb5bd] bg-black uppercase mb-2.5 hover:underline">blah</a>
+          <a href="#" class="text-[#adb5bd] bg-black uppercase mb-2.5 hover:underline">blah blah</a>
+          <a href="#" class="text-[#adb5bd] bg-black uppercase mb-2.5 hover:underline">blah</a>
+        </div>
       </div>
     </div>
   </div>
@@ -76,27 +84,20 @@
 </div>
 
 <script>
-  let myMediaQuery = window.matchMedia('(max-width: 768px)');
+  var dropdown = document.getElementsByClassName('dropbtn');
+  var i;
 
-  function widthChangeCallback(myMediaQuery) {
-    if (myMediaQuery.matches) {
-      var dropdown = document.getElementsByClassName('dropbtn');
-      var i;
-
-      for (i = 0; i < dropdown.length; i++) {
-        dropdown[i].addEventListener('click', function () {
-          this.classList.toggle('active');
-          var dropdownContent = this.nextElementSibling;
-          if (dropdownContent.style.display === 'block') {
-            dropdownContent.style.display = 'none';
-          } else {
-            dropdownContent.style.display = 'block';
-          }
-        });
+  for (i = 0; i < dropdown.length; i++) {
+    dropdown[i].addEventListener('click', function () {
+      this.classList.toggle('active');
+      var dropdownContent = this.nextElementSibling;
+      if (dropdownContent.style.display === 'block') {
+        dropdownContent.style.display = 'none';
+      } else {
+        dropdownContent.style.display = 'block';
       }
-    }
+    });
   }
-  myMediaQuery.addEventListener('change', widthChangeCallback);
 </script>
 
 {% schema %}
