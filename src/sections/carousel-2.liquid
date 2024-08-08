@@ -5,48 +5,40 @@
       <p class="mb-5">Tag us online @blah! blah blah blah</p>
     </div>
 
-    <div class="mx-auto flex items-center justify-center">
-      <div class="wrapper2 flex max-w-[1100px] w-full relative">
-        <div class="btn2 flex  items-center" id="right">
-          <button class="inline mr-2 rounded-full bg-[#FFF]" id="next-btn">&larr;</button>
-        </div>
-        <div class="carousel2 flex">
-          <div class="card2">
+    <div class="mx-auto flex flex-col items-center justify-center">
+        
+        <div class="carousel-2 max-w-[1000px] flex justify-center">
+          <div class="px-1.5 flex justify-center">
             <a href="#" class="">
               <img height="300px" width="300px" src="https://placehold.co/300x300">
             </a>
           </div>
-          <div class="card2">
+          <div class="px-1.5 flex justify-center">
             <a href="#" class="">
               <img height="300px" width="300px" src="https://placehold.co/300x300">
             </a>
           </div>
-          <div class="card2">
+          <div class="px-1.5 flex justify-center">
             <a href="#" class="">
               <img height="300px" width="300px" src="https://placehold.co/300x300">
             </a>
           </div>
-          <div class="card2">
+          <div class="px-1.5 flex justify-center">
             <a href="#" class="">
               <img height="300px" width="300px" src="https://placehold.co/300x300">
             </a>
           </div>
-          <div class="card2">
+          <div class="px-1.5 flex justify-center">
             <a href="#" class="">
               <img height="300px" width="300px" src="https://placehold.co/300x300">
             </a>
           </div>
-          <div class="card2">
+          <div class="px-1.5 flex justify-center">
             <a href="#" class="">
               <img height="300px" width="300px" src="https://placehold.co/300x300">
             </a>
           </div>
         </div>
-        <div class="btn2 flex items-center" id="left">
-          <button class="inline ml-2 rounded-full bg-[#FFF]" id="next-btn">&rarr;</button>
-        </div>
-      </div>
-    </div>
 
     <div class="mt-12 flex justify-center gap-4">
       <div>
@@ -65,77 +57,18 @@
   </div>
 </div>
 
-<style>
-  .wrapper2 .carousel2 {
-    display: grid;
-    grid-auto-flow: column;
-    grid-auto-columns: 300px;
-    gap: 16px;
-    overflow-x: auto;
-    scroll-snap-type: x mandatory;
-    scroll-behavior: smooth;
-  }
-
-  .carousel2 .card- {
-    height: 300px;
-    list-style: none;
-    background: #fff;
-    border-radius: 8px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    padding-bottom: 15px;
-    cursor: pointer;
-  }
-
-  .carousel2.no-transition {
-    scroll-behavior: auto;
-  }
-
-  .carousel2::-webkit-scrollbar {
-    display: none;
-  }
-</style>
-
 <script>
-  const carousel = document.querySelector('.carousel2');
-  const arrowBtns = document.querySelectorAll('.wrapper2 .btn2');
-  const firstCardWidth = carousel.querySelector('.card2').offsetWidth;
-  const carouselChildrens = [...carousel2.children];
-
-  arrowBtns.forEach((btn2) => {
-    btn2.addEventListener('click', () => {
-      carousel.scrollLeft += btn2.id === 'right' ? -firstCardWidth : firstCardWidth;
+  $(document).ready(function () {
+    $('.carousel-2').slick({
+      infinite: true,
+      slidesToShow: 3,
+      slidesToScroll: 1,
+      prevArrow:
+        '<button type="button" class="slick-prev h-8 w-4"><svg aria-hidden="true" focusable="false" role="presentation" viewBox="0 0 7 11"><path d="M5.5.037a1.5 1.5 0 0 1 1.06 2.56l-2.94 2.94 2.94 2.94a1.5 1.5 0 0 1-2.12 2.12l-4-4a1.5 1.5 0 0 1 0-2.12l4-4A1.5 1.5 0 0 1 5.5.037z" fill="#000000" class="layer"></path></svg></button>',
+      nextArrow:
+        '<button type="button" class="slick-next h-8 w-4"><svg aria-hidden="true" focusable="false" role="presentation" viewBox="0 0 7 11"><path d="M1.5 11A1.5 1.5 0 0 1 .44 8.44L3.38 5.5.44 2.56A1.5 1.5 0 0 1 2.56.44l4 4a1.5 1.5 0 0 1 0 2.12l-4 4A1.5 1.5 0 0 1 1.5 11z" fill="#000000"></path></svg></button>',
     });
   });
-
-  let cardPerView = Math.round(carousel.offsetWidth / firstCardWidth);
-
-  carouselChildrens
-    .slice(-cardPerView)
-    .reverse()
-    .forEach((card2) => {
-      carousel.insertAdjacentHTML('afterBegin', card2.outerHTML);
-    });
-
-  carouselChildrens.slice(0, cardPerView).forEach((card2) => {
-    carousel.insertAdjacentHTML('beforeEnd', card2.outerHTML);
-  });
-
-  const infiniteScroll = () => {
-    if (carousel.scrollLeft === 0) {
-      carousel.classList.add('no-transition');
-      carousel.scrollLeft = carousel.scrollWidth - 2 * carousel.offsetWidth;
-      carousel.classList.remove('no-transition');
-    } else if (Math.ceil(carousel.scrollLeft === carousel.scrollWidth - carousel.offsetWidth)) {
-      carousel.classList.add('no-transition');
-      carousel.scrollLeft = carousel.offsetWidth;
-      carousel.classList.remove('no-transition');
-    }
-  };
-
-  carousel.addEventListener('scroll', infiniteScroll);
 </script>
 
 {% schema %}

@@ -43,9 +43,9 @@
 .slick-prev:focus,
 .slick-next:hover,
 .slick-next:focus {
-  color: gray;
+  color: transparent;
   outline: none;
-  background: gray;
+  background: transparent;
 }
 .slick-prev:hover:before,
 .slick-prev:focus:before,
@@ -72,34 +72,32 @@
 }
 
 .slick-prev {
-  background-color: black;
   left: -25px;
 }
 [dir='rtl'] .slick-prev {
   right: -25px;
   left: auto;
 }
-.slick-prev:before {
+/* .slick-prev:before {
   content: '←';
 }
 [dir='rtl'] .slick-prev:before {
   content: '→';
-}
+} */
 
 .slick-next {
-  background-color: black;
   right: -25px;
 }
 [dir='rtl'] .slick-next {
   right: auto;
   left: -25px;
 }
-.slick-next:before {
+/* .slick-next:before {
   content: '→';
-}
-[dir='rtl'] .slick-next:before {
+} */
+/* [dir='rtl'] .slick-next:before {
   content: '←';
-}
+} */
 
 /* Dots */
 .slick-dotted.slick-slider {

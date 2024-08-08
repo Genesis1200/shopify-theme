@@ -5,133 +5,73 @@
     </h2>
   </div>
 
-  <div class="mx-auto flex items-center content-center">
-    <div class="wrapper flex max-w-[1250px] w-full">
-      <div class="btn flex  items-center" id="right">
-        <button class="inline mr-2 rounded-full bg-[#FFF]" id="next-btn">&larr;</button>
+  <div class="flex justify-center">
+    <div class="carousel max-w-[1200px]">
+      <div class="max-w-60 px-1.5">
+        <a href="#" class="max-w-60 flex flex-col">
+          <img height="190px" width="230px" src="https://placehold.co/190x230">
+          <span>Product name</span>
+          <span>$0.00</span>
+        </a>
       </div>
-      <div class="carousel flex">
-        <div class="card">
-          <a href="#" class="flex flex-col">
-            <img height="190px" width="230px" src="https://placehold.co/190x230">
-            <span>Product name</span>
-            <span>$0.00</span>
-          </a>
-        </div>
-        <div class="card">
-          <a href="#" class="flex flex-col">
-            <img height="190px" width="230px" src="https://placehold.co/190x230">
-            <span>Product name</span>
-            <span>$0.00</span>
-          </a>
-        </div>
-        <div class="card">
-          <a href="#" class="flex flex-col">
-            <img height="190px" width="230px" src="https://placehold.co/190x230">
-            <span>Product name</span>
-            <span>$0.00</span>
-          </a>
-        </div>
-        <div class="card">
-          <a href="#" class="flex flex-col">
-            <img height="190px" width="230px" src="https://placehold.co/190x230">
-            <span>Product name</span>
-            <span>$0.00</span>
-          </a>
-        </div>
-        <div class="card">
-          <a href="#" class="flex flex-col">
-            <img height="190px" width="230px" src="https://placehold.co/190x230">
-            <span>Product name</span>
-            <span>$0.00</span>
-          </a>
-        </div>
-        <div class="card">
-          <a href="#" class="flex flex-col">
-            <img height="190px" width="230px" src="https://placehold.co/190x230">
-            <span>Product name</span>
-            <span>$0.00</span>
-          </a>
-        </div>
+      <div class="max-w-60 px-1.5">
+        <a href="#" class="max-w-60 flex flex-col">
+          <img height="190px" width="230px" src="https://placehold.co/190x230">
+          <span>Product name</span>
+          <span>$0.00</span>
+        </a>
       </div>
-      <div class="btn flex  items-center" id="left">
-        <button class="inline ml-2 rounded-full bg-[#FFF]" id="next-btn">&rarr;</button>
+      <div class="max-w-60 px-1.5">
+        <a href="#" class="max-w-60 flex flex-col">
+          <img height="190px" width="230px" src="https://placehold.co/190x230">
+          <span>Product name</span>
+          <span>$0.00</span>
+        </a>
+      </div>
+      <div class="max-w-60 px-1.5">
+        <a href="#" class="max-w-60 flex flex-col">
+          <img height="190px" width="230px" src="https://placehold.co/190x230">
+          <span>Product name</span>
+          <span>$0.00</span>
+        </a>
+      </div>
+      <div class="max-w-60 px-1.5">
+        <a href="#" class="max-w-60 flex flex-col">
+          <img height="190px" width="230px" src="https://placehold.co/190x230">
+          <span>Product name</span>
+          <span>$0.00</span>
+        </a>
+      </div>
+      <div class="max-w-60 px-1.5">
+        <a href="#" class="max-w-60 flex flex-col">
+          <img height="190px" width="230px" src="https://placehold.co/190x230">
+          <span>Product name</span>
+          <span>$0.00</span>
+        </a>
+      </div>
+      <div class="max-w-60 px-1.5">
+        <a href="#" class="max-w-60 flex flex-col">
+          <img height="190px" width="230px" src="https://placehold.co/190x230">
+          <span>Product name</span>
+          <span>$0.00</span>
+        </a>
       </div>
     </div>
   </div>
 </div>
 
-<style>
-  .wrapper .carousel {
-    display: grid;
-    grid-auto-flow: column;
-    grid-auto-columns: 190px;
-    gap: 16px;
-    overflow-x: auto;
-    scroll-snap-type: x mandatory;
-    scroll-behavior: smooth;
-  }
-
-  .carousel .card {
-    max-height: 300px;
-    list-style: none;
-    background: #fff;
-    border-radius: 8px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    padding-bottom: 15px;
-    cursor: pointer;
-  }
-
-  .carousel.no-transition {
-    scroll-behavior: auto;
-  }
-
-  .carousel::-webkit-scrollbar {
-    display: none;
-  }
-</style>
-
 <script>
-  const carousel = document.querySelector('.carousel');
-  const arrowBtns = document.querySelectorAll('.wrapper .btn');
-  const firstCardWidth = carousel.querySelector('.card').offsetWidth;
-  const carouselChildrens = [...carousel.children];
-
-  arrowBtns.forEach((btn) => {
-    btn.addEventListener('click', () => {
-      carousel.scrollLeft += btn.id === 'right' ? -firstCardWidth : firstCardWidth;
+  $(document).ready(function () {
+    $('.carousel').slick({
+      infinite: true,
+      slidesToShow: 6,
+      slidesToScroll: 2,
+      prevArrow:
+        '<button type="button" class="slick-prev h-8 w-4"><svg aria-hidden="true" focusable="false" role="presentation" viewBox="0 0 7 11"><path d="M5.5.037a1.5 1.5 0 0 1 1.06 2.56l-2.94 2.94 2.94 2.94a1.5 1.5 0 0 1-2.12 2.12l-4-4a1.5 1.5 0 0 1 0-2.12l4-4A1.5 1.5 0 0 1 5.5.037z" fill="#000000" class="layer"></path></svg></button>',
+      nextArrow:
+        '<button type="button" class="slick-next h-8 w-4"><svg aria-hidden="true" focusable="false" role="presentation" viewBox="0 0 7 11"><path d="M1.5 11A1.5 1.5 0 0 1 .44 8.44L3.38 5.5.44 2.56A1.5 1.5 0 0 1 2.56.44l4 4a1.5 1.5 0 0 1 0 2.12l-4 4A1.5 1.5 0 0 1 1.5 11z" fill="#000000"></path></svg></button>',
     });
   });
-
-  let cardPerView = Math.round(carousel.offsetWidth / firstCardWidth);
-
-  carouselChildrens
-    .slice(-cardPerView)
-    .reverse()
-    .forEach((card) => {
-      carousel.insertAdjacentHTML('afterBegin', card.outerHTML);
-    });
-
-  carouselChildrens.slice(0, cardPerView).forEach((card) => {
-    carousel.insertAdjacentHTML('beforeEnd', card.outerHTML);
-  });
-
-  const infiniteScroll = () => {
-    if (carousel.scrollLeft === 0) {
-      carousel.classList.add('no-transition');
-      carousel.scrollLeft = carousel.scrollWidth - 2 * carousel.offsetWidth;
-      carousel.classList.remove('no-transition');
-    } else if (Math.ceil(carousel.scrollLeft === carousel.scrollWidth - carousel.offsetWidth)) {
-      carousel.classList.add('no-transition');
-      carousel.scrollLeft = carousel.offsetWidth;
-      carousel.classList.remove('no-transition');
-    }
-  };
-
-  carousel.addEventListener('scroll', infiniteScroll);
 </script>
 
 {% schema %}
