@@ -89,6 +89,7 @@
         "slide_qbyACJ",
         "slide_LCfRzw"
       ],
+      "disabled": true,
       "settings": {
         "title": "Carousel"
       }
@@ -158,28 +159,6 @@
       "settings": {
         "title": "Carousel"
       }
-    },
-    "test_carousel_gyxbcF": {
-      "type": "test-carousel",
-      "blocks": {
-        "slide_Y4KFYp": {
-          "type": "slide",
-          "settings": {
-          }
-        },
-        "slide_tmAneD": {
-          "type": "slide",
-          "settings": {
-          }
-        }
-      },
-      "block_order": [
-        "slide_Y4KFYp",
-        "slide_tmAneD"
-      ],
-      "settings": {
-        "title": "Carousel"
-      }
     }
   },
   "order": [
@@ -190,7 +169,6 @@
     "carousel_2_99PK9w",
     "footer_top_FMzcHQ",
     "footer_bottom_desktop_wVDLzQ",
-    "footer_bottom_mobile_VRE9YA",
-    "test_carousel_gyxbcF"
+    "footer_bottom_mobile_VRE9YA"
   ]
 }
