@@ -769,12 +769,21 @@ select {
   position: relative;
 }
 
+.inset-x-0 {
+  left: 0px;
+  right: 0px;
+}
+
 .left-0 {
   left: 0px;
 }
 
 .top-\[20\%\] {
   top: 20%;
+}
+
+.top-\[35\%\] {
+  top: 35%;
 }
 
 .z-10 {
@@ -1175,6 +1184,11 @@ select {
   padding-bottom: 1.25rem;
 }
 
+.py-px {
+  padding-top: 1px;
+  padding-bottom: 1px;
+}
+
 .pb-2 {
   padding-bottom: 0.5rem;
 }
@@ -1243,6 +1257,16 @@ select {
 .text-xs {
   font-size: 0.75rem;
   line-height: 1rem;
+}
+
+.text-3xl {
+  font-size: 1.875rem;
+  line-height: 2.25rem;
+}
+
+.text-4xl {
+  font-size: 2.25rem;
+  line-height: 2.5rem;
 }
 
 .font-bold {
@@ -1379,13 +1403,21 @@ select {
   opacity: 0.75;
 }
 
-@media (min-width: 640px) {
-  .sm\:flex {
-    display: flex;
+@media (max-width: 430px) {
+  .max-\[430px\]\:mt-0 {
+    margin-top: 0px;
   }
 
-  .sm\:hidden {
+  .max-\[430px\]\:block {
+    display: block;
+  }
+
+  .max-\[430px\]\:hidden {
     display: none;
+  }
+
+  .max-\[430px\]\:overflow-scroll {
+    overflow: scroll;
   }
 }
 

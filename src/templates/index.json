@@ -5,23 +5,107 @@
       "settings": {
       }
     },
+    "featured_product_mobile_z43MxQ": {
+      "type": "featured-product-mobile",
+      "settings": {
+        "title": "Carousel"
+      }
+    },
     "carousel_iQ6yJG": {
       "type": "carousel",
       "blocks": {
         "slide_VpNtND": {
           "type": "slide",
           "settings": {
+            "image": "shopify:\/\/shop_images\/carousel-1.jpg",
+            "product_name": "7 INCH LEATHER CROSSBODY BAG",
+            "product_price": "$85.00"
+          }
+        },
+        "slide_gkATj6": {
+          "type": "slide",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/carousel-2.jpg",
+            "product_name": "11 INCH MESSENGER BAG",
+            "product_price": "$140.00"
+          }
+        },
+        "slide_rXPne3": {
+          "type": "slide",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/carousel-3.jpg",
+            "product_name": "HEART SHAPED BACKPACK",
+            "product_price": "$130.00"
           }
         },
         "slide_bdQryF": {
           "type": "slide",
           "settings": {
+            "image": "shopify:\/\/shop_images\/carousel-4.jpg",
+            "product_name": "MINI HEART SHAPED BAG",
+            "product_price": "$75.00"
+          }
+        },
+        "slide_8UxFme": {
+          "type": "slide",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/carousel-5.jpg",
+            "product_name": "LEATHER BUCKLE SLIDE SANDALS",
+            "product_price": "$120.00"
+          }
+        },
+        "slide_md9Rcn": {
+          "type": "slide",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/carousel-6.jpg",
+            "product_name": "LEATHER BUCKLE SLIDE SANDALS",
+            "product_price": "$120.00"
+          }
+        },
+        "slide_FfXBgT": {
+          "type": "slide",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/carousel-7.jpg",
+            "product_name": "FISHERMAN SANDALS",
+            "product_price": "$150.00"
+          }
+        },
+        "slide_J74FUt": {
+          "type": "slide",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/carousel-8.jpg",
+            "product_name": "1460 LEATHER LACE UP BOOTS",
+            "product_price": "$170.00"
+          }
+        },
+        "slide_XGprAQ": {
+          "type": "slide",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/carousel-9.jpg",
+            "product_name": "PLATFORM SANDAL",
+            "product_price": "$120.00"
+          }
+        },
+        "slide_NWQYYp": {
+          "type": "slide",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/carousel-10.jpg",
+            "product_name": "STEENWYCK LEATHER BOOTS",
+            "product_price": "$180.00"
           }
         }
       },
       "block_order": [
         "slide_VpNtND",
-        "slide_bdQryF"
+        "slide_gkATj6",
+        "slide_rXPne3",
+        "slide_bdQryF",
+        "slide_8UxFme",
+        "slide_md9Rcn",
+        "slide_FfXBgT",
+        "slide_J74FUt",
+        "slide_XGprAQ",
+        "slide_NWQYYp"
       ],
       "settings": {
         "title": "Carousel"
@@ -29,44 +113,12 @@
     },
     "homepage_content_z34pG3": {
       "type": "homepage-content",
-      "blocks": {
-        "slide_MNJJEp": {
-          "type": "slide",
-          "settings": {
-          }
-        },
-        "slide_NAgeLJ": {
-          "type": "slide",
-          "settings": {
-          }
-        }
-      },
-      "block_order": [
-        "slide_MNJJEp",
-        "slide_NAgeLJ"
-      ],
       "settings": {
         "title": "Slideshow"
       }
     },
     "homepage_content_2_rbgk8F": {
       "type": "homepage-content-2",
-      "blocks": {
-        "slide_QHUHRL": {
-          "type": "slide",
-          "settings": {
-          }
-        },
-        "slide_HTkJw9": {
-          "type": "slide",
-          "settings": {
-          }
-        }
-      },
-      "block_order": [
-        "slide_QHUHRL",
-        "slide_HTkJw9"
-      ],
       "settings": {
         "title": "Slideshow"
       }
@@ -77,17 +129,37 @@
         "slide_qbyACJ": {
           "type": "slide",
           "settings": {
+            "image": "shopify:\/\/shop_images\/sm-1.webp"
           }
         },
         "slide_LCfRzw": {
           "type": "slide",
           "settings": {
+            "image": "shopify:\/\/shop_images\/sm-2.webp"
+          }
+        },
+        "slide_ttcT9F": {
+          "type": "slide",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/sm-3.webp",
+            "product_name": "",
+            "product_price": ""
+          }
+        },
+        "slide_rzfMkP": {
+          "type": "slide",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/sm-4.webp",
+            "product_name": "",
+            "product_price": ""
           }
         }
       },
       "block_order": [
         "slide_qbyACJ",
-        "slide_LCfRzw"
+        "slide_LCfRzw",
+        "slide_ttcT9F",
+        "slide_rzfMkP"
       ],
       "settings": {
         "title": "Carousel"
@@ -95,66 +167,18 @@
     },
     "footer_top_FMzcHQ": {
       "type": "footer-top",
-      "blocks": {
-        "slide_icCUyG": {
-          "type": "slide",
-          "settings": {
-          }
-        },
-        "slide_kAzVwt": {
-          "type": "slide",
-          "settings": {
-          }
-        }
-      },
-      "block_order": [
-        "slide_icCUyG",
-        "slide_kAzVwt"
-      ],
       "settings": {
         "title": "Carousel"
       }
     },
     "footer_bottom_desktop_wVDLzQ": {
       "type": "footer-bottom-desktop",
-      "blocks": {
-        "slide_JkkKxk": {
-          "type": "slide",
-          "settings": {
-          }
-        },
-        "slide_AGfNr8": {
-          "type": "slide",
-          "settings": {
-          }
-        }
-      },
-      "block_order": [
-        "slide_JkkKxk",
-        "slide_AGfNr8"
-      ],
       "settings": {
         "title": "Carousel"
       }
     },
     "footer_bottom_mobile_VRE9YA": {
       "type": "footer-bottom-mobile",
-      "blocks": {
-        "slide_Wa7xnx": {
-          "type": "slide",
-          "settings": {
-          }
-        },
-        "slide_WbUD6G": {
-          "type": "slide",
-          "settings": {
-          }
-        }
-      },
-      "block_order": [
-        "slide_Wa7xnx",
-        "slide_WbUD6G"
-      ],
       "settings": {
         "title": "Carousel"
       }
@@ -162,6 +186,7 @@
   },
   "order": [
     "main",
+    "featured_product_mobile_z43MxQ",
     "carousel_iQ6yJG",
     "homepage_content_z34pG3",
     "homepage_content_2_rbgk8F",
